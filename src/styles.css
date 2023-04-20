@@ -1,0 +1,65 @@
+body {
+  font-family: "PT Mono", monospace;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+}
+
+button {
+  color: rgb(70, 5, 233);
+}
+h1 {
+  color: #6d040a;
+  font-family: "Oswald", sans-serif;
+  font-family: "Zeyada", cursive;
+  font-size: 58px;
+}
+
+.message {
+  color: #f1563d;
+  font-family: "Roboto Mono", monospace;
+  font-size: 25px;
+  top: 0;
+  right: 0;
+}
+input [type="text"] {
+  width: 100%;
+  resize: vertical;
+  padding: 15px;
+  border-radius: 15px;
+  border: 0;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+  height: 150px;
+}
+.Enter-a-city {
+  text-align: right;
+}
+
+.container {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 50px;
+  background-color: #dee1d6;
+}
+
+.col {
+  position: relative;
+  padding: 20px;
+}
+h4 {
+  font-size: 50px;
+}
+h4 {
+  text-align: right;
+  color: rgb(29, 77, 190);
+  font-optical-sizing: auto;
+}
+div {
+  color: #86a4dd;
+  font-weight: 200px;
+  font-size: large;
+}
