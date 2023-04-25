@@ -43,18 +43,10 @@ form.addEventListener("submit", search);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#changeClime");
-
-  temperatureElement.innerHTML = 100;
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#changeClime");
+let temperatureElement = document.querySelector(".temperature");
 
   temperatureElement.innerHTML = 38;
 }
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 

@@ -146,12 +146,7 @@ var form = document.querySelector("form");
 form.addEventListener("submit", search);
 function convertToFahrenheit(event) {
   event.preventDefault();
-  var temperatureElement = document.querySelector("#changeClime");
-  temperatureElement.innerHTML = 100;
-}
-function convertToCelsius(event) {
-  event.preventDefault();
-  var temperatureElement = document.querySelector("#changeClime");
+  var temperatureElement = document.querySelector(".temperature");
   temperatureElement.innerHTML = 38;
 }
 var fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -226,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46777" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34545" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
