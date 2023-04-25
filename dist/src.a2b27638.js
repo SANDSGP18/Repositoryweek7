@@ -147,7 +147,7 @@ form.addEventListener("submit", search);
 function convertToFahrenheit(event) {
   event.preventDefault();
   var temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = 38;
+  temperatureElement.innerHTML = "38\xB0";
 }
 var fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -160,9 +160,10 @@ function showForecast(response) {
   tempValue.innerHTML = "".concat(tempRounded);
 }
 function searchCurrentCity(city) {
-  var apiKey = "1d4d255b77e630f2c1a85a42dd47884b";
-  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=").concat(apiKey, "&units=metric");
-  axios.get("".concat(apiUrl, "&appid=").concat(apiKey)).then(searchCurrentCity);
+  var apiKey = "6e7b473b7e81ef87d8d22f55577a0c3b";
+  var unit = "metric";
+  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=").concat(apiKey, "&units=").concat(unit);
+  axios.get(apiUrl).then(searchCurrentCity);
 }
 function showCurrPosition(position) {
   var lat = position.coords.latitude;

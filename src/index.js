@@ -38,15 +38,16 @@ function search(event) {
     form.innerHTML = "Search for a city";
   }
 }
+
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
 let temperatureElement = document.querySelector(".temperature");
-
-  temperatureElement.innerHTML = 38;
+temperatureElement.innerHTML = `38°`;
 }
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
@@ -62,9 +63,10 @@ function showForecast(response) {
 }
 
 function searchCurrentCity(city) {
-  let apiKey = "1d4d255b77e630f2c1a85a42dd47884b";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(searchCurrentCity);
+  let apiKey = "6e7b473b7e81ef87d8d22f55577a0c3b";
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(searchCurrentCity);
 }
 function showCurrPosition(position) {
   let lat = position.coords.latitude;
