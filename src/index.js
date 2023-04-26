@@ -71,8 +71,8 @@ function searchCurrentCity(city) {
 function showCurrentPosition(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
-  let apiKey = `2ff29bed3181c3526c35cc5408037f85`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+  let apiKey = `7ec182ec88739a3454c5fa81f4ba0304`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
 axios.get(apiUrl).then(showCurrentPosition);
 }
 function getCurrentLocation(e) {
@@ -96,8 +96,8 @@ function showCityLocation(e) {
 }
 
 function searchCity(city) {
-  let apiKey = `2ff29bed3181c3526c35cc5408037f85`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiKey = `7ec182ec88739a3454c5fa81f4ba0304`;
+  let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
 
   axios.get(apiUrl).then(showCityInfo);
 }
@@ -105,3 +105,4 @@ let button = document.querySelector("button");
 button.addEventListener("click", Location);
 let searchNow = document.querySelector("#searchForm");
 searchNow.addEventListener("submit", showCityLocation);
+
