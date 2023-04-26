@@ -165,16 +165,16 @@ function searchCurrentCity(city) {
   var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=").concat(apiKey, "&units=").concat(unit);
   axios.get(apiUrl).then(searchCurrentCity);
 }
-function showCurrPosition(position) {
+function showCurrentPosition(position) {
   var lat = position.coords.latitude;
   var long = position.coords.longitude;
   var apiKey = "2ff29bed3181c3526c35cc5408037f85";
   var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=".concat(lat, "&lon=").concat(long, "&appid=").concat(apiKey, "&units=metric");
-  axios.get(apiUrl).then(showCurrPosition);
+  axios.get(apiUrl).then(showCurrentPosition);
 }
-function getCurrLocation(e) {
+function getCurrentLocation(e) {
   e.preventDefault();
-  navigator.geolocation.getCurrentPosition(showCurrPosition);
+  navigator.geolocation.getCurrentPosition(showCurrentPosition);
 }
 function showCityInfo(info) {
   var temprature = Math.round(info.data.main.temp);
