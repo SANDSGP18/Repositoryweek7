@@ -160,7 +160,7 @@ function showForecast(response) {
   tempValue.innerHTML = "".concat(tempRounded);
 }
 function searchCurrentCity(city) {
-  var apiKey = "6e7b473b7e81ef87d8d22f55577a0c3b";
+  var apiKey = "7ec182ec88739a3454c5fa81f4ba0304";
   var unit = "metric";
   var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=").concat(apiKey, "&units=").concat(unit);
   axios.get(apiUrl).then(searchCurrentCity);
@@ -170,7 +170,7 @@ function showCurrPosition(position) {
   var long = position.coords.longitude;
   var apiKey = "2ff29bed3181c3526c35cc5408037f85";
   var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=".concat(lat, "&lon=").concat(long, "&appid=").concat(apiKey, "&units=metric");
-  axios.get(apiUrl).then(showInfo);
+  axios.get(apiUrl).then(showCurrPosition);
 }
 function getCurrLocation(e) {
   e.preventDefault();
