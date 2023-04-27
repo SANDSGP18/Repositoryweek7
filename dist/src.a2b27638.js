@@ -147,7 +147,12 @@ form.addEventListener("submit", search);
 function convertToFahrenheit(event) {
   event.preventDefault();
   var temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = "38\xB0";
+  temperatureElement.innerHTML = Math.round(celsiusTemperature * 9 / 5 + 32);
+}
+function convertToCelsius(event) {
+  event.preventDefault();
+  var temperatureElement = document.querySelector(".temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 var fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -177,6 +182,7 @@ function getCurrentLocation(e) {
   navigator.geolocation.getCurrentPosition(showCurrentPosition);
 }
 function showCityInfo(info) {
+  celsiusTemperature = info.data.main.temp;
   var temprature = Math.round(info.data.main.temp);
   var temp = document.querySelector(".temperature");
   temp.innerHTML = "".concat(temprature);
@@ -188,9 +194,10 @@ function showCityLocation(e) {
   h4.innerHTML = "".concat(searchcity);
   searchCity(searchcity);
 }
+var celsiusTemperature = null;
 function searchCity(city) {
   var apiKey = "7ec182ec88739a3454c5fa81f4ba0304";
-  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=").concat(apiKey, "&units=").concat(unit);
+  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=").concat(apiKey, "&units=metric");
   axios.get(apiUrl).then(showCityInfo);
 }
 var button = document.querySelector("button");
