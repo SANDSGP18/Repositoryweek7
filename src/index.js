@@ -7,7 +7,7 @@ let days = [
   "Monday",
   "Tueday",
   "Wensday",
-  "Thuday",
+  "Thursday",
   "Friday",
   "Saturday"
 ];

@@ -120,7 +120,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"src/index.js":[function(require,module,exports) {
 var currentTime = new Date();
 var p = document.querySelector("p");
-var days = ["Sunday", "Monday", "Tueday", "Wensday", "Thuday", "Friday", "Saturday"];
+var days = ["Sunday", "Monday", "Tueday", "Wensday", "Thursday", "Friday", "Saturday"];
 var currentDay = days[currentTime.getDay()];
 var currentHours = currentTime.getHours();
 if (currentHours < 10) {
