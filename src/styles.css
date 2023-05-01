@@ -46,7 +46,7 @@ input [type="text"] {
   background-color: #dee1d6;
 }
 
-.col {
+.col-4 {
   position: relative;
   padding: 30px;
 }
