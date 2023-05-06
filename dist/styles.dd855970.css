@@ -1,9 +1,9 @@
 body {
   font-family: "PT Mono", monospace;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-top: 100px;
+  padding-bottom:100px;
+  padding-left: 100px;
+  padding-right: 100px;
   box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
 }
 
