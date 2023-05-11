@@ -37,13 +37,12 @@ input [type="text"] {
   text-align: right;
 }
 
-.container {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 20px;
-  background-color: #dee1d6;
+.container-weather {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 3px solid #F9F7FE;
+  
 }
 .col-3{
   position:relative;
