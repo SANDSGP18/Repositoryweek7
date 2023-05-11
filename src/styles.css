@@ -45,9 +45,11 @@ input [type="text"] {
   border-radius: 20px;
   background-color: #dee1d6;
 }
-
+.col-3{
+  position:relative;
+}
 .col-6 {
-  position: relative;
+  position:center;
   padding: 30px;
 }
 h4 {
