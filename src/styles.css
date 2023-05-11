@@ -44,8 +44,15 @@ input [type="text"] {
   border: 3px solid #F9F7FE;
   border-radius: 10px;
 }
-.col-3{
+li {
   position:relative;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
 }
 .col-6 {
   position:center;
