@@ -37,7 +37,7 @@ input [type="text"] {
   text-align: right;
 }
 .container-weather-wrapper{
-  max-width: 600px;
+  max-width: 800px;
   margin: 30px auto;
 }
 .container-weather {

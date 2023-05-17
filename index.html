@@ -3,48 +3,39 @@
 
 <head>
   <title>Week7 </title>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
-  rel="stylesheet"
-  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
-  crossorigin="anonymous"/>
-  <meta name="viewport" 
-  content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" 
-  rel="stylesheet"/>
-  <link rel="preconnect" 
-  href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" 
-  href="https://fonts.gstatic.com" 
-  crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Zeyada&display=swap" 
-  rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" 
-  rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Zeyada&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-  <link href="src/styles.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <link href="src/styles.css" rel="stylesheet" />
 </head>
 
 <body>
 
-    <div class="container-weather-wrapper">
-<div class="container-weather">
+  <div class="container-weather-wrapper">
+    <div class="container-weather">
       <form id="searchForm">
         <input type="text" placeholder="Search for a city" autocomplete="off" autofocus="on" class="search-bar"
           class="form-control" id="searchTime" />
 
         <input type="submit" value="Go" />
       </form>
-      
-      <br/>
 
-      <div class= "current-temperature">
+      <br />
+
+      <div class="current-temperature">
 
         <h1>
           <span class="temperature">
@@ -69,101 +60,100 @@
           <br />
           <br />
         </p>
-    
-    
-     <div class="row">
-     <div class= "col-3">
-          <ul>
-            <li>
-              Precipitation: 0%
+
+
+        <div class="row">
+          <div class="col-3">
+            <ul>
+              <li>
+                Precipitation: 0%
               </li>
               <li>
                 Humidity: 60%
-                </>
-                <li>
-                  Wind: 2km/h
-                  </li>
-                  </ul>
-                   </div>
-                   </div>
+              </li>
+              <li>
+                Wind: 2km/h
+              </li>
+            </ul>
+          </div>
+        </div>
 
-          <p>
-            
-            <div class="row">
-        <div class="col-6">
+        <p>
+
+        <div class="row flex-nowrap">
+          <div class="col">
             Tuesday
             <br />
             <img src="MEDIA/2.png" alt="" width="40" />
             <br />
             28°C
-          </p>
-        </div>
-        <div class="col-6">
+            </p>
+          </div>
+          <div class="col">
 
-          <p>
-            Wedsnesday
-            <br />
-            <img src="MEDIA/3.png" alt="" width="40" />
-            <br />
-            22°C
-          </p>
-        </div>
-        <div class="col-6">
+            <p>
+              Wedsnesday
+              <br />
+              <img src="MEDIA/3.png" alt="" width="40" />
+              <br />
+              22°C
+            </p>
+          </div>
+          <div class="col">
 
-          <p>
-            Thursday
-            <br />
-            <img src="MEDIA/2.png" alt="" width="40" />
-            <br />
-            28°C
-          </p>
-        </div>
-       <div class="col-6">
+            <p>
+              Thursday
+              <br />
+              <img src="MEDIA/2.png" alt="" width="40" />
+              <br />
+              28°C
+            </p>
+          </div>
+          <div class="col">
 
-          <p>
-            Friday
-            <br />
-            <img src="MEDIA/1.png" alt="" width="40" />
-            <br />
-            20°C
-          </p>
-        </div>
-        <div class="col-6">
+            <p>
+              Friday
+              <br />
+              <img src="MEDIA/1.png" alt="" width="40" />
+              <br />
+              20°C
+            </p>
+          </div>
+          <div class="col">
 
-          <p>
-            Saturday
-            <br />
-            <img src="MEDIA/6.png" alt="" width="40" />
-            <br />
-            18°C
-          </p>
-           </div>
-        <div class="col-6">
+            <p>
+              Saturday
+              <br />
+              <img src="MEDIA/6.png" alt="" width="40" />
+              <br />
+              18°C
+            </p>
+          </div>
+          <div class="col">
 
-          <p>
-            Sunday
-            <br />
-            <img src="MEDIA/4.png" alt="" width="40" />
-            <br />
-            30°C
-          </p>
-           </div>
-        <div class="col-6">
+            <p>
+              Sunday
+              <br />
+              <img src="MEDIA/4.png" alt="" width="40" />
+              <br />
+              30°C
+            </p>
+          </div>
+          <div class="col">
 
-          <button>
-            Location
-          </button>
+            <button>
+              Location
+            </button>
 
+          </div>
         </div>
       </div>
+      <footer>
+        <a href="https://github.com/SANDSGP18/Repositoryweek7/tree/draft/kind-voice">open-source code</a>
+        by Sandra Grados
+      </footer>
     </div>
-     <footer>
-       <a href="https://github.com/SANDSGP18/Repositoryweek7/tree/draft/kind-voice"
-       >open-source code</a>
-       by Sandra Grados
-       </footer>
-       </div>
     <script src="src/index.js"></script>
-  </body>
+</body>
 
 </html>
