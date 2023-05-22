@@ -73,3 +73,9 @@ div {
   font-weight: 200px;
   font-size: large;
 }
+
+.message{
+  font-size: 20px;
+  color: #1B1C58;
+  font-weight: 150px;
+}
