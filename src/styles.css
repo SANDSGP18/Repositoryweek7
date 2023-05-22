@@ -60,13 +60,13 @@ ul{
   position:center;
   padding: 30px;
 }
-h4 {
-  font-size: 50px;
-}
+
 h4 {
   text-align: right;
-  color: rgb(29, 77, 190);
+  color: #1B1C58;
   font-optical-sizing: auto;
+  font-size: 50px;
+  font-weight: 300;
 }
 div {
   color: #86a4dd;
@@ -79,3 +79,4 @@ div {
   color: #1B1C58;
   font-weight: 150px;
 }
+

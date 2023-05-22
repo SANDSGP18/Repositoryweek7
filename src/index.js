@@ -44,8 +44,10 @@ form.addEventListener("submit", search);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
+  
 let temperatureElement = document.querySelector(".temperature");
 temperatureElement.innerHTML = Math.round((celsiusTemperature * 9/5) + 32);
+
 }
 
 function convertToCelsius(event) {
