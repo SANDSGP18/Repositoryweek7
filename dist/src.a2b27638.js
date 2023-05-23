@@ -131,19 +131,6 @@ if (currentMinutes < 10) {
   currentMinutes = "0".concat(currentMinutes);
 }
 p.innerHTML = "".concat(currentDay, " | ").concat(currentHours, ":").concat(currentMinutes);
-function search(event) {
-  event.preventDefault();
-  var searchInput = document.querySelector(".search-bar");
-  var h4 = document.querySelector("h4");
-  if (searchInput.value) {
-    h4.innerHTML = "".concat(searchInput.value);
-  } else {
-    form.innerHTML = null;
-    form.innerHTML = "Search for a city";
-  }
-}
-var form = document.querySelector("form");
-form.addEventListener("submit", search);
 function convertToFahrenheit(event) {
   event.preventDefault();
   var temperatureElement = document.querySelector(".temperature");
@@ -158,34 +145,25 @@ var fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 var celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
-function showForecast(response) {
-  console.log(response);
-  var tempValue = document.querySelector("#temperature");
-  var tempRounded = Math.round("".concat(response.data.main.temp));
-  tempValue.innerHTML = "".concat(tempRounded);
-}
-function searchCurrentCity(city) {
-  var apiKey = "7ec182ec88739a3454c5fa81f4ba0304";
-  var unit = "metric";
-  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=").concat(apiKey, "&units=").concat(unit);
-  axios.get(apiUrl).then(searchCurrentCity);
-}
 function showCurrentPosition(position) {
   var lat = position.coords.latitude;
   var long = position.coords.longitude;
   var apiKey = "7ec182ec88739a3454c5fa81f4ba0304";
-  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=").concat(apiKey, "&units=").concat(unit);
-  axios.get(apiUrl).then(showCurrentPosition);
+  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=".concat(lat, "&lon=").concat(long, "&appid=").concat(apiKey, "&units=metric");
+  axios.get(apiUrl).then(showCityInfo);
 }
 function getCurrentLocation(e) {
   e.preventDefault();
   navigator.geolocation.getCurrentPosition(showCurrentPosition);
 }
 function showCityInfo(info) {
+  console.log(info);
   celsiusTemperature = info.data.main.temp;
   var temprature = Math.round(info.data.main.temp);
   var temp = document.querySelector(".temperature");
   temp.innerHTML = "".concat(temprature);
+  var h4 = document.querySelector("h4");
+  h4.innerHTML = "".concat(info.data.name);
 }
 function showCityLocation(e) {
   e.preventDefault();
@@ -201,7 +179,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(showCityInfo);
 }
 var button = document.querySelector("button");
-button.addEventListener("click", Location);
+button.addEventListener("click", getCurrentLocation);
 var searchNow = document.querySelector("#searchForm");
 searchNow.addEventListener("submit", showCityLocation);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
