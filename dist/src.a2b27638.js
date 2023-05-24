@@ -164,6 +164,8 @@ function showCityInfo(info) {
   temp.innerHTML = "".concat(temprature);
   var h4 = document.querySelector("h4");
   h4.innerHTML = "".concat(info.data.name);
+  var descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = "".concat(info.data.weather[0].description);
 }
 function showCityLocation(e) {
   e.preventDefault();

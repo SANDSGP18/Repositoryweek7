@@ -65,6 +65,9 @@ function showCityInfo(info) {
 
   let h4 = document.querySelector("h4");
   h4.innerHTML = `${info.data.name}`;
+  
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = `${info.data.weather[0].description}`;
 }
 
 function showCityLocation(e) {
