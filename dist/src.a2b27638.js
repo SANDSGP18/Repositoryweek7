@@ -118,72 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"src/index.js":[function(require,module,exports) {
-var currentTime = new Date();
-var p = document.querySelector("p");
-var days = ["Sunday", "Monday", "Tueday", "Wensday", "Thursday", "Friday", "Saturday"];
-var currentDay = days[currentTime.getDay()];
-var currentHours = currentTime.getHours();
-if (currentHours < 10) {
-  currentHours = "0".concat(currentHours);
-}
-var currentMinutes = currentTime.getMinutes();
-if (currentMinutes < 10) {
-  currentMinutes = "0".concat(currentMinutes);
-}
-p.innerHTML = "".concat(currentDay, " | ").concat(currentHours, ":").concat(currentMinutes);
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  var temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature * 9 / 5 + 32);
-}
-function convertToCelsius(event) {
-  event.preventDefault();
-  var temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-var fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-var celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-function showCurrentPosition(position) {
-  var lat = position.coords.latitude;
-  var long = position.coords.longitude;
-  var apiKey = "7ec182ec88739a3454c5fa81f4ba0304";
-  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=".concat(lat, "&lon=").concat(long, "&appid=").concat(apiKey, "&units=metric");
-  axios.get(apiUrl).then(showCityInfo);
-}
-function getCurrentLocation(e) {
-  e.preventDefault();
-  navigator.geolocation.getCurrentPosition(showCurrentPosition);
-}
-function showCityInfo(info) {
-  console.log(info);
-  celsiusTemperature = info.data.main.temp;
-  var temprature = Math.round(info.data.main.temp);
-  var temp = document.querySelector(".temperature");
-  temp.innerHTML = "".concat(temprature);
-  var h4 = document.querySelector("h4");
-  h4.innerHTML = "".concat(info.data.name);
-  var descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = "".concat(info.data.weather[0].description);
-}
-function showCityLocation(e) {
-  e.preventDefault();
-  var searchcity = document.querySelector("#searchTime").value.toLowerCase();
-  var h4 = document.querySelector("h4");
-  h4.innerHTML = "".concat(searchcity);
-  searchCity(searchcity);
-}
-var celsiusTemperature = null;
-function searchCity(city) {
-  var apiKey = "7ec182ec88739a3454c5fa81f4ba0304";
-  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=").concat(apiKey, "&units=metric");
-  axios.get(apiUrl).then(showCityInfo);
-}
-var button = document.querySelector("button");
-button.addEventListener("click", getCurrentLocation);
-var searchNow = document.querySelector("#searchForm");
-searchNow.addEventListener("submit", showCityLocation);
+
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
